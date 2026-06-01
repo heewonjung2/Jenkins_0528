@@ -61,7 +61,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         always {
             echo "[*] Archiving test results..."
@@ -70,9 +70,15 @@ pipeline {
         }
         failure {
             echo "Build or test failed"
+            mail to: 'tnsgh01@gmail.com',
+                 subject: "[Jenkins] 파이프라인 빌드 실패 알림",
+                 body: "빌드 또는 테스트 중 에러가 발생했습니다. 젠킨스 로그를 확인해주세요."
         }
         success {
             echo "Build and test succeeded"
+            mail to: 'tnsgh01@gmail.com',
+                 subject: "[Jenkins] 파이프라인 빌드 성공 알림",
+                 body: "자동화 파이프라인 빌드 및 JUnit 테스트가 성공적으로 완료되었습니다."
         }
     }
 }
