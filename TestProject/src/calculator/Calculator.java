@@ -1,5 +1,5 @@
 package calculator;
-// 젠킨스 테스트 빌드 자동화 점검
+// 젠킨스 빌드 자동화 테스트
 public class Calculator {
 	
 	public int add(int num1, int num2) {
