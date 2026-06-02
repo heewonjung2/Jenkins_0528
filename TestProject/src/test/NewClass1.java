@@ -1,5 +1,8 @@
 package test;
 
+import java.util.Set;
+import java.util.HashSet;
+
 public class NewClass1 {
     private String name;
     private Set<String> books = new HashSet<>();
