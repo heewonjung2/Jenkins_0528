@@ -76,7 +76,7 @@ pipeline {
         }
         success {
             echo "Build and test succeeded"
-            mail to: 'tnsgh01@gmail.com',
+            mail to: 'tnsgh01@gmail.com, heewonjung1@gmail.com',
                  subject: "[Jenkins] 파이프라인 빌드 성공 알림",
                  body: "자동화 파이프라인 빌드 및 JUnit 테스트가 성공적으로 완료됐습니다."
         }
